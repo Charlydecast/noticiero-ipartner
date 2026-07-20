@@ -534,7 +534,7 @@ tick(); setInterval(tick,10000);
 /* cintillo */
 document.getElementById('tickerTrack').innerHTML =
   DATO + '<span class="sep">◆</span>' +
-  NEWS.filter(n=>!n.honest).map(n=>esc(n.title)).join('<span class="sep">◆</span>');
+  NEWS.filter(n=>!n.honest).map(n=>esc(n.title)).join('<span class="sep">◆</span>') + '<span class="sep">◆</span>Proyecto creado por <b>Carlos D. y Hilary S.</b>';
 
 render();
 </script>
