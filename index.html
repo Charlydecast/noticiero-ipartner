@@ -259,8 +259,10 @@ body{
     position:relative; left:auto; top:auto; transform:none;
     width:94vw; margin:2.5vh auto 0; height:62vh; border-radius:5vw;
   }
-  .clockchip{font-size:3vw;} .clockchip b{font-size:3.8vw;}
-  .slide{width:78vw; margin-left:-39vw; top:3.5vh; height:50vh; border-radius:4vw; padding:2.4vh 4.5vw 2vh; gap:1.2vh;}
+  .clockchip{font-size:3vw; left:0; right:0; top:1.2vh; text-align:center;}
+  .clockchip br{display:none;}
+  .clockchip b{font-size:3.6vw; margin-left:2.5vw;}
+  .slide{width:78vw; margin-left:-39vw; top:6vh; height:48vh; border-radius:4vw; padding:2.4vh 4.5vw 2vh; gap:1.2vh;}
   .slide.left{transform:translateX(calc(-70vw + var(--dx))) scale(.84);}
   .slide.right{transform:translateX(calc(70vw + var(--dx))) scale(.84);}
   .headline{font-size:6vw;}
@@ -534,7 +536,7 @@ tick(); setInterval(tick,10000);
 /* cintillo */
 document.getElementById('tickerTrack').innerHTML =
   DATO + '<span class="sep">◆</span>' +
-  NEWS.filter(n=>!n.honest).map(n=>esc(n.title)).join('<span class="sep">◆</span>') + '<span class="sep">◆</span>Proyecto creado por <b>Carlos D. y Hilary S.</b>';
+  NEWS.filter(n=>!n.honest).map(n=>esc(n.title)).join('<span class="sep">◆</span>') + '<span class="sep">◆</span>Ingeniería comercial | Elaborado por <b>Hilary S. y Carlos</b>';
 
 render();
 </script>
