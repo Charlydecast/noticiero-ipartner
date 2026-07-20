@@ -250,6 +250,56 @@ body{
 .ticker .track b{color:var(--cyan);}
 .ticker .track .sep{color:var(--orange); margin:0 1.4vw;}
 @keyframes scrollT{from{transform:translateX(100vw)} to{transform:translateX(-100%)}}
+
+/* ═════ MODO VERTICAL (celulares) — layout apilado ═════ */
+@media (max-aspect-ratio: 4/5){
+  html,body{overflow-y:auto; overflow-x:hidden; height:auto; min-height:100%;}
+  .ceiling,.beam{display:none;}
+  .wall{
+    position:relative; left:auto; top:auto; transform:none;
+    width:94vw; margin:2.5vh auto 0; height:62vh; border-radius:5vw;
+  }
+  .clockchip{font-size:3vw;} .clockchip b{font-size:3.8vw;}
+  .slide{width:78vw; margin-left:-39vw; top:3.5vh; height:50vh; border-radius:4vw; padding:2.4vh 4.5vw 2vh; gap:1.2vh;}
+  .slide.left{transform:translateX(calc(-70vw + var(--dx))) scale(.84);}
+  .slide.right{transform:translateX(calc(70vw + var(--dx))) scale(.84);}
+  .headline{font-size:6vw;}
+  .slide.honest .headline{font-size:4.6vw;}
+  .ammo-mark{font-size:4.5vw; top:1.4vh; right:3vw;}
+  .visual-row{flex-direction:column; gap:1vh;}
+  .visual svg{max-height:20vh;}
+  .bigfig .fs1{font-size:11vw;} .bigfig .fs2{font-size:8vw;} .bigfig .fs3{font-size:6.5vw;}
+  .bigfig small{font-size:3.2vw;}
+  .source{font-size:2.6vw;}
+  .btn-news{font-size:3.4vw; padding:1.4vh 5vw;}
+  .chev{font-size:9vw; padding:2vh 2vw;}
+  .dots i{width:2vw; height:2vw;}
+  .silver-panel{
+    position:relative; right:auto; top:auto; bottom:auto;
+    width:94vw; margin:2.5vh auto 2vh; gap:1.6vh;
+  }
+  .silver-title{font-size:4.2vw; padding:1.2vh 3vw; border-radius:99px;}
+  .silver-box{flex:none; min-height:20vh; border-radius:4vw; padding:2vh 4vw; gap:1vh;}
+  .silver-box .num{width:8vw; height:8vw; font-size:4.5vw;}
+  .silver-box .obj{font-size:5vw;}
+  .silver-box .arg{font-size:3.8vw; -webkit-line-clamp:3;}
+  .silver-box .say{font-size:4.6vw;}
+  .floor,.platform{display:none;}
+  .front-stage{
+    position:relative; left:auto; bottom:auto; transform:none;
+    margin:0 auto 12vh; width:70vw;
+  }
+  .robot{width:26vw;}
+  .robot-wrap{margin-bottom:-4vh;}
+  .desk{width:64vw;}
+  .desk .top{height:2.6vh;}
+  .desk .brand{font-size:6vw;}
+  .desk .stripe{height:.6vh;}
+  .desk .stripe.st1{bottom:3vh;} .desk .stripe.st2{bottom:1.5vh;}
+  .ticker{height:5.5vh;}
+  .ticker .label{font-size:3vw; padding:0 3.5vw;}
+  .ticker .track{font-size:3.2vw;}
+}
 </style>
 </head>
 <body>
